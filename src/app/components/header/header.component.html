@@ -1,0 +1,10 @@
+<header>
+  <div class="logo">
+    <a routerLink="/home">
+      <img src="../../../assets/images/logo.png" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+  <div class="date">
+    <p>{{ currentDate$ | async | date : "EEE MMM dd yyyy HH:mm:ss" }}</p>
+  </div>
+</header>
