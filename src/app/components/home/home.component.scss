@@ -1,0 +1,26 @@
+@import "../../palette.scss";
+
+#home {
+  > ul {
+    > li {
+      list-style: none;
+      border: 1px solid $primary-color;
+      &:first-of-type {
+        margin-bottom: 5px;
+      }
+      &:last-of-type {
+        margin-top: 5px;
+      }
+      > a {
+        padding: 20px;
+
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 18px;
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

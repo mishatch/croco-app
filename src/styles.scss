@@ -4,3 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Ninomtavruli";
+  src: url("./assets/fonts/bpg_nino_mtavruli_bold.ttf");
+}
+body {
+  font-family: "Ninomtavruli", sans-serif;
+}
