@@ -10,6 +10,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { TableComponent } from './components/table/table.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NamePipe } from './pipes/name.pipe';
+import { SurnamePipe } from './pipes/surname.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationComponent,
     TableComponent,
     FooterComponent,
+    NamePipe,
+    SurnamePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { PostsService } from '../../services/posts.service';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-table',
@@ -8,63 +9,17 @@ import { PostsService } from '../../services/posts.service';
   styleUrl: './table.component.scss',
 })
 export class TableComponent {
-  data = [
-    {
-      name: 'John',
-      surname: 'Doe',
-      number: '31',
-      mail: 'da@gmail.com',
-      company: 'Google',
-      links: 'www.google.com',
-    },
-    {
-      name: 'John',
-      surname: 'Doe',
-      number: '31',
-      mail: 'da@gmail.com',
-      company: 'Google',
-      links: 'www.google.com',
-    },
-    {
-      name: 'John',
-      surname: 'Doe',
-      number: '31',
-      mail: 'da@gmail.com',
-      company: 'Google',
-      links: 'www.google.com',
-    },
-    {
-      name: 'John',
-      surname: 'Doe',
-      number: '31',
-      mail: 'da@gmail.com',
-      company: 'Google',
-      links: 'www.google.com',
-    },
-    {
-      name: 'John',
-      surname: 'Doe',
-      number: '31',
-      mail: 'da@gmail.com',
-      company: 'Google',
-      links: 'www.google.com',
-    },
-    {
-      name: 'John',
-      surname: 'Doe',
-      number: '31',
-      mail: 'da@gmail.com',
-      company: 'Google',
-      links: 'www.google.com',
-    },
-  ];
+  users!: User[];
+
   constructor(
     private usersService: UsersService,
     private postsService: PostsService
   ) {
     this.usersService.getUsers().subscribe((users) => {
       console.log(users);
+      this.users = users;
     });
+
     this.postsService.getPosts().subscribe((posts) => {
       console.log(posts);
     });
