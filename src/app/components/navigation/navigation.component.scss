@@ -1,0 +1,47 @@
+@import "../../palette.scss";
+
+ul {
+  > li {
+    list-style: none;
+    border: 1px solid $primary-color;
+    &:first-of-type {
+      margin-bottom: 5px;
+    }
+    &:last-of-type {
+      margin-top: 5px;
+    }
+    > a {
+      padding: 10px;
+
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 12px;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  ul {
+    > li {
+      border-right: none;
+      > a {
+        padding: 3px;
+        font-size: 8px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  ul {
+    > li {
+      border: 1px solid $primary-color;
+
+      > a {
+        padding: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+}

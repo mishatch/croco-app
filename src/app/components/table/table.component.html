@@ -1,0 +1,44 @@
+<section id="table">
+  <div class="users">
+    <table>
+      <thead>
+        <tr>
+          <th>სახელი</th>
+          <th>გვარი</th>
+          <th>ტელ. ნომერი</th>
+          <th>ელ. ფოსტა</th>
+          <th>კომპანია</th>
+          <th>პოსტები</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.name }}</td>
+          <td>{{ item.surname }}</td>
+          <td>{{ item.number }}</td>
+          <td>{{ item.mail }}</td>
+          <td>{{ item.company }}</td>
+          <td>{{ item.links }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="posts">
+    <table>
+      <thead>
+        <tr>
+          <th>პოსტის სათაური</th>
+          <th>მომხმარებლის სახელი</th>
+          <th>პოსტი</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.name }}</td>
+          <td>{{ item.surname }}</td>
+          <td>{{ item.company }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -22,6 +22,13 @@ header {
   }
   > .date {
     color: $primary-light;
-    font-size: 18px;
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    > .date {
+      font-size: 18px;
+    }
   }
 }
