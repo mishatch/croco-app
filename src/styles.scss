@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
+@import "./app/palette.scss";
 * {
   margin: 0;
   padding: 0;
@@ -24,4 +25,14 @@ body {
 }
 .cdk-overlay-container {
   display: none !important;
+}
+th,
+td {
+  border: 1px solid $primary-color;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: $table-header-color;
 }

@@ -18,6 +18,7 @@
             <th>ელ. ფოსტა</th>
             <th>კომპანია</th>
             <th>პოსტები</th>
+            <th>ToDos</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +32,11 @@
             <td>
               <button [routerLink]="['/user-posts', user.id]">
                 იხილეთ პოსტები
+              </button>
+            </td>
+            <td>
+              <button [routerLink]="['/user-todos', user.id]">
+                Display Todos
               </button>
             </td>
           </tr>

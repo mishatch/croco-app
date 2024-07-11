@@ -1,0 +1,27 @@
+<section id="todos">
+  <div class="todos">
+    <h2>User Todos</h2>
+    <table *ngIf="filteredTodos.length > 0">
+      <thead>
+        <tr>
+          <th>Todo Title</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let todo of filteredTodos"
+          [class.completed]="todo.completed"
+        >
+          <td>{{ todo.title }}</td>
+          <td>
+            {{ todo.completed ? "Completed" : "Pending" }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="filteredTodos.length === 0" class="no-todos">
+      No todos found for this user.
+    </div>
+  </div>
+</section>

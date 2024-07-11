@@ -18,6 +18,7 @@ import { PostsTableComponent } from './components/posts-table/posts-table.compon
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
+import { UserTodosComponent } from './components/user-todos/user-todos.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     SurnamePipe,
     UsersPostsComponent,
     PostsTableComponent,
+    UserTodosComponent,
   ],
   imports: [
     BrowserModule,
