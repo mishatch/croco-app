@@ -1,1 +1,17 @@
-<p>users-posts works!</p>
+<div class="container">
+  @for (post of posts; track post) {
+  <div class="card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      src="../../../assets/images/card.png"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ post.title }}</h5>
+      <p class="card-text">
+        {{ post.body }}
+      </p>
+    </div>
+  </div>
+  }
+</div>

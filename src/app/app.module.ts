@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NamePipe } from './pipes/name.pipe';
 import { SurnamePipe } from './pipes/surname.pipe';
 import { UsersPostsComponent } from './components/users-posts/users-posts.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { UsersPostsComponent } from './components/users-posts/users-posts.compon
     SurnamePipe,
     UsersPostsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })
