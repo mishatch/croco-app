@@ -25,9 +25,7 @@ ul {
 @media screen and (min-width: 1024px) {
   ul {
     > li {
-      border-right: none;
       > a {
-        padding: 3px;
         font-size: 8px;
       }
     }
@@ -36,10 +34,7 @@ ul {
 @media screen and (min-width: 1440px) {
   ul {
     > li {
-      border: 1px solid $primary-color;
-
       > a {
-        padding: 20px;
         font-size: 18px;
       }
     }

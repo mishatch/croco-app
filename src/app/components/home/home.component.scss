@@ -1,6 +1,5 @@
 .wrapper {
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,44 +7,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
     > div {
       padding-top: 20px;
       padding-bottom: 20px;
-    }
-    > .table {
-      overflow: scroll;
-      .table-comp {
-        height: 100%;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .wrapper {
-    #home {
-      flex-direction: row;
-
-      > div:first-of-type {
-        width: 15%;
-      }
-      > div:last-of-type {
-        width: 85%;
-      }
-    }
-  }
-}
-@media screen and (min-width: 1440px) {
-  .wrapper {
-    #home {
-      gap: 20px;
-      > div:first-of-type {
-        width: 30%;
-      }
-      > div:last-of-type {
-        width: 70%;
-      }
     }
   }
 }

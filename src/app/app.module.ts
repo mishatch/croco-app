@@ -14,6 +14,7 @@ import { NamePipe } from './pipes/name.pipe';
 import { SurnamePipe } from './pipes/surname.pipe';
 import { UsersPostsComponent } from './components/users-posts/users-posts.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PostsTableComponent } from './components/posts-table/posts-table.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NamePipe,
     SurnamePipe,
     UsersPostsComponent,
+    PostsTableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],

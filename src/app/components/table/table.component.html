@@ -12,7 +12,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users">
+        @for ( user of users; track user){
+        <tr>
           <td>{{ user.name | name }}</td>
           <td>{{ user.name | surname }}</td>
           <td>{{ user.phone }}</td>
@@ -23,26 +24,8 @@
               იხილეთ პოსტები
             </button>
           </td>
-          <!-- last row is for the link which navigates to that users posts page, now its just filled with dummy data -->
         </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="posts">
-    <table>
-      <thead>
-        <tr>
-          <th>პოსტის სათაური</th>
-          <th>მომხმარებლის სახელი</th>
-          <th>პოსტი</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of users">
-          <td>{{ item.name }}</td>
-          <td>{{ item.phone }}</td>
-          <td>{{ item.email }}</td>
-        </tr>
+        }
       </tbody>
     </table>
   </div>

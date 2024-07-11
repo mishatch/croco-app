@@ -11,17 +11,9 @@ import { User } from '../../models/user.model';
 export class TableComponent {
   users!: User[];
 
-  constructor(
-    private usersService: UsersService,
-    private postsService: PostsService
-  ) {
+  constructor(private usersService: UsersService) {
     this.usersService.getUsers().subscribe((users) => {
-      console.log(users);
       this.users = users;
-    });
-
-    this.postsService.getPosts().subscribe((posts) => {
-      console.log(posts);
     });
   }
 }

@@ -1,0 +1,20 @@
+<section id="posts-table">
+  <div class="posts">
+    <table>
+      <thead>
+        <tr>
+          <th>მომხმარებლის სახელი</th>
+          <th>პოსტის სათაური</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for ( post of posts; track post){
+        <tr>
+          <td>{{ getUsername(post.userId) }}</td>
+          <td>{{ post.title }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
