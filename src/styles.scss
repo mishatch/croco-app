@@ -13,3 +13,15 @@
 body {
   font-family: "Ninomtavruli", sans-serif !important;
 }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.cdk-overlay-container {
+  display: none !important;
+}

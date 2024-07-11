@@ -15,6 +15,8 @@ import { SurnamePipe } from './pipes/surname.pipe';
 import { UsersPostsComponent } from './components/users-posts/users-posts.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsTableComponent } from './components/posts-table/posts-table.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,14 @@ import { PostsTableComponent } from './components/posts-table/posts-table.compon
     UsersPostsComponent,
     PostsTableComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule,
+    MatPaginatorModule,
+  ],
+  providers: [provideAnimationsAsync('noop')],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

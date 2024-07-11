@@ -5,16 +5,56 @@
         <tr>
           <th>მომხმარებლის სახელი</th>
           <th>პოსტის სათაური</th>
+          <th>დეტალურად</th>
         </tr>
       </thead>
       <tbody>
-        @for ( post of posts; track post){
+        @for (post of paginatedPosts; track trackByPost){
         <tr>
           <td>{{ getUsername(post.userId) }}</td>
           <td>{{ post.title }}</td>
+          <td>
+            <button
+              (click)="
+                openVerticallyCentered(content); getProps(post.title, post.body)
+              "
+            >
+              პოსტის ნახვა
+            </button>
+          </td>
         </tr>
         }
       </tbody>
     </table>
+    <mat-paginator
+      [length]="posts.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[]"
+      (page)="onPageChange($event)"
+    >
+    </mat-paginator>
   </div>
 </section>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">{{ postTitle }}</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <p>{{ postBody }}</p>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-secondary"
+      (click)="modal.close('Close click')"
+    >
+      დახურვა
+    </button>
+  </div>
+</ng-template>

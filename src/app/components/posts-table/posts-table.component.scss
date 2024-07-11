@@ -12,12 +12,16 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 th,
 td {
   border: 1px solid $primary-color;
   padding: 8px;
   text-align: left;
+}
+.posts {
+  width: 100%;
 }
 
 th {
