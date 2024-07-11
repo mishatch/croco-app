@@ -8,7 +8,6 @@ table {
 }
 #table {
   width: 100%;
-  height: 692px;
   display: flex;
   justify-content: start;
   align-items: start;
@@ -23,18 +22,20 @@ table {
   align-items: start;
   flex-direction: column;
 }
-th,
-td {
-  border: 1px solid $primary-color;
-  padding: 8px;
-  text-align: left;
+td:last-of-type,
+td:nth-of-type(6) {
+  padding: 10px;
+  > button {
+    display: block;
+    margin: 0 auto;
+  }
 }
-
 th {
   background-color: $primary-blue;
 }
 .users {
   width: 100%;
+  overflow-x: auto;
 }
 @media screen and (max-width: 768px) {
   #table {

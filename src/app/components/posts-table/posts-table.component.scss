@@ -10,9 +10,14 @@ table {
   width: 100%;
   min-height: calc(100vh - 200px);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   overflow: auto;
+  flex-direction: column;
+  > .nav {
+    display: block;
+    width: 100%;
+  }
 }
 td:last-of-type {
   padding: 0;

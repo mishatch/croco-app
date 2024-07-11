@@ -31,14 +31,10 @@
             <td>{{ user.email }}</td>
             <td>{{ user.company.name }}</td>
             <td>
-              <button [routerLink]="['/user-posts', user.id]">
-                იხილეთ პოსტები
-              </button>
+              <button [routerLink]="['/user-posts', user.id]">პოსტები</button>
             </td>
             <td>
-              <button [routerLink]="['/user-todos', user.id]">
-                Display Todos
-              </button>
+              <button [routerLink]="['/user-todos', user.id]">Todos</button>
             </td>
           </tr>
           }
