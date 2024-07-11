@@ -1,11 +1,5 @@
 @import "../../palette.scss";
 
-table {
-  width: 100%;
-  min-width: 435px; // უფრო პატარა ზომის თეიბლი მობაილ დივაისზე არ იკითხებოდა, მაგიტო დაჭირდა სქროლი.
-  border-collapse: collapse;
-  font-size: 12px;
-}
 #posts-table {
   width: 100%;
   min-height: calc(100vh - 200px);
@@ -18,36 +12,25 @@ table {
     display: block;
     width: 100%;
   }
-}
-td:last-of-type {
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  > button {
-    display: block;
-    margin: 0 auto;
-  }
-}
-.posts {
-  width: 100%;
-}
-
-th {
-  background-color: $primary-blue;
-}
-
-@media screen and (max-width: 768px) {
-  #posts-table {
-    justify-content: start;
-  }
-}
-@media screen and (min-width: 1024px) {
-  table {
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  table {
-    font-size: 16px;
+  > .posts {
+    width: 100%;
+    table {
+      width: 100%;
+      min-width: 435px; // უფრო პატარა ზომის თეიბლი მობაილ დივაისზე არ იკითხებოდა, მაგიტო დაჭირდა სქროლი.
+      border-collapse: collapse;
+      font-size: 14px;
+      td:last-of-type {
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        > button {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      th {
+        background-color: $primary-blue;
+      }
+    }
   }
 }

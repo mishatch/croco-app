@@ -1,19 +1,5 @@
 @import "../../palette.scss";
 
-table {
-  width: 100%;
-  min-width: 435px; // უფრო პატარა ზომის თეიბლი მობაილ დივაისზე არ იკითხებოდა, მაგიტო დაჭირდა სქროლი.
-  border-collapse: collapse;
-  font-size: 12px;
-}
-#table {
-  width: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  flex-direction: column;
-  gap: 20px;
-}
 .wrapper {
   width: 100%;
   height: calc(100vh - 200px);
@@ -21,37 +7,36 @@ table {
   justify-content: start;
   align-items: start;
   flex-direction: column;
-}
-td:last-of-type,
-td:nth-of-type(6) {
-  padding: 10px;
-  > button {
-    display: block;
-    margin: 0 auto;
+  .nav {
+    width: 100%;
   }
-}
-th {
-  background-color: $primary-blue;
-}
-.users {
-  width: 100%;
-  overflow-x: auto;
-}
-@media screen and (max-width: 768px) {
   #table {
+    width: 100%;
+    display: flex;
     justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    .users {
+      width: 100%;
+      overflow-x: auto;
+      table {
+        width: 100%;
+        min-width: 435px; // უფრო პატარა ზომის თეიბლი მობაილ დივაისზე არ იკითხებოდა, მაგიტო დაჭირდა სქროლი.
+        border-collapse: collapse;
+        font-size: 14px;
+        td:last-of-type,
+        td:nth-of-type(6) {
+          padding: 10px;
+          > button {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        th {
+          background-color: $primary-blue;
+        }
+      }
+    }
   }
-}
-@media screen and (min-width: 1024px) {
-  table {
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  table {
-    font-size: 16px;
-  }
-}
-.nav {
-  width: 100%;
 }

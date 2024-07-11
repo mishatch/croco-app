@@ -19,7 +19,7 @@ export class TableComponent implements OnInit {
     this.usersService.getUsers().subscribe((users) => {
       this.users = users;
       this.filteredUsers = users;
-      this.loading = false; // Set loading to false once data is loaded
+      this.loading = false;
     });
   }
 
