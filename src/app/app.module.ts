@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsTableComponent } from './components/posts-table/posts-table.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HttpClientModule,
     NgbModule,
     MatPaginatorModule,
+    FormsModule,
   ],
   providers: [provideAnimationsAsync('noop')],
   bootstrap: [AppComponent],

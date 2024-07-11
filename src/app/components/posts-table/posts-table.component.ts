@@ -59,7 +59,8 @@ export class PostsTableComponent implements OnInit {
     this.pageSize = event.pageSize;
     this.updatePaginatedPosts();
   }
-  //
+  
+  //ngxbootstrap modal
   openVerticallyCentered(content: TemplateRef<any>) {
     this.modalService.open(content, { centered: true });
   }

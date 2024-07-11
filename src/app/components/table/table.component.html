@@ -1,32 +1,46 @@
-<section id="table">
-  <div class="users">
-    <table>
-      <thead>
-        <tr>
-          <th>სახელი</th>
-          <th>გვარი</th>
-          <th>ტელ. ნომერი</th>
-          <th>ელ. ფოსტა</th>
-          <th>კომპანია</th>
-          <th>პოსტები</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for ( user of users; track user){
-        <tr>
-          <td>{{ user.name | name }}</td>
-          <td>{{ user.name | surname }}</td>
-          <td>{{ user.phone }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.company.name }}</td>
-          <td>
-            <button [routerLink]="['/user-posts', user.id]">
-              იხილეთ პოსტები
-            </button>
-          </td>
-        </tr>
-        }
-      </tbody>
-    </table>
-  </div>
-</section>
+<div class="wrapper">
+  <section id="table">
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="ძებნა"
+        [(ngModel)]="searchTerm"
+        (input)="filterUsers()"
+      />
+    </div>
+    <div class="users">
+      <table *ngIf="filteredUsers.length > 0">
+        <thead>
+          <tr>
+            <th>სახელი</th>
+            <th>გვარი</th>
+            <th>ტელ. ნომერი</th>
+            <th>ელ. ფოსტა</th>
+            <th>კომპანია</th>
+            <th>პოსტები</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (user of filteredUsers; track trackByUser){
+          <tr>
+            <td>{{ user.name | name }}</td>
+            <td>{{ user.name | surname }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.company.name }}</td>
+            <td>
+              <button [routerLink]="['/user-posts', user.id]">
+                იხილეთ პოსტები
+              </button>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    @if(filteredUsers.length === 0) {
+    <div class="errormsg">მომხმარებელი არ მოიძებნა</div>
+    }
+  </section>
+</div>
