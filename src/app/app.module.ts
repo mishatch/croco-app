@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NamePipe } from './pipes/name.pipe';
 import { SurnamePipe } from './pipes/surname.pipe';
+import { UsersPostsComponent } from './components/users-posts/users-posts.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SurnamePipe } from './pipes/surname.pipe';
     FooterComponent,
     NamePipe,
     SurnamePipe,
+    UsersPostsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

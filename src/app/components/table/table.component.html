@@ -18,7 +18,12 @@
           <td>{{ user.phone }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.company.name }}</td>
-          <td>{{ user.website }}</td>
+          <td>
+            <button [routerLink]="['/user-posts', user.id]">
+              იხილეთ პოსტები
+            </button>
+          </td>
+          <!-- last row is for the link which navigates to that users posts page, now its just filled with dummy data -->
         </tr>
       </tbody>
     </table>
