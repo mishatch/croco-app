@@ -1,12 +1,17 @@
 <section id="posts-table">
   <app-navigation class="nav"></app-navigation>
   <div class="posts">
+    @if(loading) {
+    <div class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+    }
     <table>
       <thead>
         <tr>
           <th>მომხმარებლის სახელი</th>
           <th>პოსტის სათაური</th>
-          <th>დეტალურად</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -20,7 +25,7 @@
                 openVerticallyCentered(content); getProps(post.title, post.body)
               "
             >
-              პოსტის ნახვა
+              დეტალურად
             </button>
           </td>
         </tr>

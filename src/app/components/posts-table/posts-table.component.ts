@@ -19,6 +19,7 @@ export class PostsTableComponent implements OnInit {
   pageIndex = 0;
   postTitle = '';
   postBody = '';
+  loading: boolean = true;
   private modalService = inject(NgbModal);
 
   constructor(
@@ -30,7 +31,7 @@ export class PostsTableComponent implements OnInit {
     this.postsService.getPosts().subscribe((posts) => {
       this.posts = posts;
       this.updatePaginatedPosts();
-      console.log(posts);
+      this.loading = false;
     });
     this.usersService.getUsers().subscribe((users) => {
       this.users = users;
@@ -59,7 +60,7 @@ export class PostsTableComponent implements OnInit {
     this.pageSize = event.pageSize;
     this.updatePaginatedPosts();
   }
-  
+
   //ngxbootstrap modal
   openVerticallyCentered(content: TemplateRef<any>) {
     this.modalService.open(content, { centered: true });

@@ -9,8 +9,14 @@
         (input)="filterUsers()"
       />
     </div>
+    @if(loading) {
+    <div class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+    } @if(!loading) {
     <div class="users">
-      <table *ngIf="filteredUsers.length > 0">
+      @if(filteredUsers.length > 0) {
+      <table>
         <thead>
           <tr>
             <th>სახელი</th>
@@ -23,7 +29,7 @@
           </tr>
         </thead>
         <tbody>
-          @for (user of filteredUsers; track trackByUser){
+          @for(user of filteredUsers; track trackByUser){
           <tr>
             <td>{{ user.name | name }}</td>
             <td>{{ user.name | surname }}</td>
@@ -40,10 +46,11 @@
           }
         </tbody>
       </table>
+      }
     </div>
-
-    @if(filteredUsers.length === 0) {
-    <div class="errormsg">მომხმარებელი არ მოიძებნა</div>
     }
+    <div *ngIf="!loading && filteredUsers.length === 0" class="errormsg">
+      მომხმარებელი არ მოიძებნა
+    </div>
   </section>
 </div>
