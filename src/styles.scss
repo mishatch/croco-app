@@ -34,5 +34,34 @@ td {
 }
 
 th {
-  background-color: $table-header-color;
+  background-color: $primary-blue;
+  color: $primary-light;
+}
+button {
+  background-color: $primary-blue;
+  color: $primary-light;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: $hover-blue;
+  transition: left 0.3s;
+}
+
+button:hover::before {
+  left: 0;
 }

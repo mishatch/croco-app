@@ -14,18 +14,21 @@ table {
   align-items: center;
   overflow: auto;
 }
-th,
-td {
-  border: 1px solid $primary-color;
-  padding: 8px;
-  text-align: left;
+td:last-of-type {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  > button {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .posts {
   width: 100%;
 }
 
 th {
-  background-color: $table-header-color;
+  background-color: $primary-blue;
 }
 
 @media screen and (max-width: 768px) {

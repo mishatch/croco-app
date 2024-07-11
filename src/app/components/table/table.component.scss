@@ -19,8 +19,9 @@ table {
   width: 100%;
   height: calc(100vh - 200px);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
 }
 th,
 td {
@@ -30,7 +31,7 @@ td {
 }
 
 th {
-  background-color: $table-header-color;
+  background-color: $primary-blue;
 }
 .users {
   width: 100%;
@@ -49,4 +50,7 @@ th {
   table {
     font-size: 16px;
   }
+}
+.nav {
+  width: 100%;
 }

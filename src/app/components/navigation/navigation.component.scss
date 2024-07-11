@@ -1,9 +1,11 @@
 @import "../../palette.scss";
 
 ul {
+  padding: 0;
+  width: 50%;
   > li {
     list-style: none;
-    border: 1px solid $primary-color;
+
     &:first-of-type {
       margin-bottom: 5px;
     }
@@ -12,13 +14,25 @@ ul {
     }
     > a {
       padding: 10px;
-
       text-decoration: none;
-      color: $primary-color;
+      color: $primary-light;
       font-size: 12px;
       width: 100%;
       display: block;
       text-align: center;
+      background-color: $primary-blue;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
@@ -26,7 +40,7 @@ ul {
   ul {
     > li {
       > a {
-        font-size: 8px;
+        font-size: 16px;
       }
     }
   }
