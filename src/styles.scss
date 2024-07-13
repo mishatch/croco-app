@@ -51,7 +51,7 @@ button {
   transition: color 0.3s;
 }
 
-button::before {
+button:not(.mat-mdc-icon-button)::before {
   content: "";
   position: absolute;
   top: 0;
