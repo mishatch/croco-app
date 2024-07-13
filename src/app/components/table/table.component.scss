@@ -2,7 +2,7 @@
 
 .wrapper {
   width: 100%;
-  height: calc(100vh - 200px);
+  min-height: calc(100vh - 200px);
   display: flex;
   justify-content: start;
   align-items: start;
